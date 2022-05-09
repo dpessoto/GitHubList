@@ -6,6 +6,7 @@ object Libs {
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.3"
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}"
     const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}"
+    const val startup = "androidx.startup:startup-runtime:1.1.0"
 
     // LifeCycle
     private const val lifecycleVersion = "2.3.1"

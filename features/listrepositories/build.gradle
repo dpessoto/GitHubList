@@ -1,0 +1,25 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlinx-serialization'
+apply from: "$rootDir/plugins/android.gradle"
+
+android {
+    resourcePrefix "listrepositories"
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation Libs.coreKtx
+    implementation Libs.appCompat
+    implementation Libs.androidMaterial
+    implementation Libs.constraintLayout
+    implementation Libs.startup
+
+    testImplementation TestLibs.junit
+    androidTestImplementation TestLibs.extJunit
+    androidTestImplementation TestLibs.espressoCore
+}
