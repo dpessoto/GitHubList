@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GitHubList">
         <activity
-            android:name=".MainActivity"
+            android:theme="@style/SplashTheme"
+            android:name=".SplashActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:screenOrientation="portrait">

@@ -1,5 +1,6 @@
 package br.com.pessoto.githublist
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,14 +8,17 @@ import android.os.Handler
 import android.os.Looper
 import br.com.pessoto.listrepositories.ListRepositoriesActivity
 
-class MainActivity : AppCompatActivity() {
+private const val delay = 2000L
+
+@SuppressLint("CustomSplashScreen")
+class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.splash_activity)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, ListRepositoriesActivity::class.java)
-            startActivity(intent)
-        }, 3000)
+            startActivity(Intent(this, ListRepositoriesActivity::class.java))
+            finish()
+        }, delay)
     }
 }
