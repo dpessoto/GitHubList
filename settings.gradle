@@ -7,4 +7,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "GitHub List"
-include ':app', ':features:listrepositories'
+include ':app',
+        ':features:listrepositories',
+        ':corearch'

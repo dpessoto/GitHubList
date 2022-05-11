@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlinx-serialization'
+apply from: "$rootDir/plugins/android.gradle"
+
+android {
+    resourcePrefix "corearch"
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation Libs.coreKtx
+    implementation Libs.startup
+
+}
